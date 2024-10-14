@@ -28,7 +28,7 @@ el usuario puede ver la información detallada de la misma y acceder a opciones 
 
 *Editar meta*
 Los usuarios pueden modificar las metas existentes a través de la pantalla de edición, donde pueden actualizar el nombre, la descripción, la fecha límite,
-la categoría y la imagen motivacional. Tras guardar los cambios, aparece una notificación de éxito.
+la categoría y la imagen motivacional. Tras guardar los cambios, aparece una notificación de éxito..
 
 
 *Eliminar meta*
