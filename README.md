@@ -6,7 +6,7 @@ y utiliza diálogos interactivos para recordar o ajustar los plazos de las metas
 
 
 **Funcionalidades Principales**
-![Captura de pantalla 2024-10-13 174914](https://github.com/user-attachments/assets/a42c4ca3-5a34-4042-8298-c0f28636de27)
+
 
 *Pantalla de inicio*
 La pantalla inicial ofrece dos opciones: ver las metas existentes o crear una nueva meta. Ambas opciones están claramente representadas con botones grandes y visibles,
@@ -37,3 +37,7 @@ Si el usuario desea eliminar una meta, se le presentará una ventana emergente d
 
 
 **Mockups**
+![image](https://github.com/user-attachments/assets/8e7cc326-1d3f-4a07-a388-e0b84524a459)
+
+![Captura de pantalla 2024-10-13 174914](https://github.com/user-attachments/assets/a42c4ca3-5a34-4042-8298-c0f28636de27)
+
