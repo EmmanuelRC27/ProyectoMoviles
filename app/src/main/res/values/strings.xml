@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_title">Bienvenido a tu seguimiento de metas</string>
+
+    <string name="btn_view_goals">Ver metas</string>
+    <string name="btn_create_goal">Crear nueva meta</string>
+
+    <string name="tittle_Create_Goal">Crear nueva meta</string>
+    <string name="Goal_Name">Nombre de la meta</string>
+    <string name="Goal_Desciption">Descripcion</string>
+    <string name="Goal_deadline">Fecha Limite</string>
+    <string name="Goal_Category">Categoria</string>
+    <string name="Goal_Image">Imagen Motivacional</string>
+    <string name="Upload_Goal_Image">Subir Imagen</string>
+    <string name="btn_Create_Goal">Crear Meta</string>
+
+    <string-array name="goal_categories">
+        <item>Corto Plazo</item>
+        <item>Mediano Plazo</item>
+        <item>Largo Plazo</item>
+    </string-array>
+
+    <string name="goals_list">Tus metas</string>
+    <string-array name="goals_array">
+        <item>Corto Plazo</item>
+        <item>Mediano Plazo</item>
+        <item>Largo Plazo</item>
+    </string-array>
+
+    <string name="bnt_Cancel">Cancelar</string>
+</resources>
