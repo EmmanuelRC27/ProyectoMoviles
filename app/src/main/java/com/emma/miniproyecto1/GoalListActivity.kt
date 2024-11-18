@@ -1,37 +1,40 @@
 package com.emma.miniproyecto1
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.ListView
-import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.emma.miniproyecto1.Model.GoalRepository // Importa correctamente el paquete
+import com.emma.miniproyecto1.entities.GoalEntity
 
 class GoalListActivity : AppCompatActivity() {
 
-    private lateinit var spinnerGoals: Spinner
-    private lateinit var listViewGoals: ListView
-    private lateinit var btnEditGoal: Button
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: GoalsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_goals_list)
 
-        spinnerGoals = findViewById(R.id.spinnerGoals)
-        listViewGoals = findViewById(R.id.listViewGoals)
-        btnEditGoal = findViewById(R.id.btn_edit_goal)
+        recyclerView = findViewById(R.id.recyclerViewGoals)
+        recyclerView.layoutManager = LinearLayoutManager(this)
 
-        val goals = resources.getStringArray(R.array.goals_array)
+        // Cargar metas en el RecyclerView
+        loadGoals()
+    }
 
-        val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, goals)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinnerGoals.adapter = adapter
+    private fun loadGoals() {
+        // Obtener metas directamente desde el repositorio
+        val goals: List<GoalEntity> = GoalRepository.getGoals()
 
-        // Configura el OnClickListener para el botón
-        btnEditGoal.setOnClickListener {
-            val intent = Intent(this, EditGoalActivity::class.java)
-            startActivity(intent)
-        }
+        // Configurar el adaptador con las metas cargadas
+        adapter = GoalsAdapter(goals)
+        recyclerView.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Actualizar la lista de metas cada vez que regreses a esta actividad
+        loadGoals()
     }
 }

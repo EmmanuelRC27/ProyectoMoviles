@@ -26,5 +26,18 @@
         <item>Largo Plazo</item>
     </string-array>
 
+
+        <string name="app_name">Seguimiento de Metas</string>
+        <string name="create_goal_title">Crear nueva meta</string>
+        <string name="goal_name_hint">Nombre de la meta</string>
+        <string name="goal_description_hint">Descripción de la meta</string>
+        <string name="select_date">Seleccionar Fecha</string>
+        <string name="date_not_selected">Fecha no seleccionada</string>
+        <string name="upload_image">Subir Imagen</string>
+        <string name="image_preview">Vista previa de la imagen</string>
+        <string name="save_goal">Guardar Meta</string>
+
+
+
     <string name="bnt_Cancel">Cancelar</string>
 </resources>

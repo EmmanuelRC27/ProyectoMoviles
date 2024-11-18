@@ -1,21 +1,45 @@
-package com.emma.miniproyecto1.model
+package com.emma.miniproyecto1.model // Ajusta esto según la ubicación del archivo
 
+import com.emma.miniproyecto1.entities.GoalClassification
 import com.emma.miniproyecto1.entities.GoalEntity
+import com.emma.miniproyecto1.Model.GoalRepository
 
-class GoalService(private val repository: GoalRepository) {
-    fun createGoal(goal: GoalEntity) {
-        repository.addGoal(goal)
+object GoalService {
+
+    // Crear una meta
+    fun createGoal(
+        name: String,
+        description: String,
+        imageUri: String?,
+        classification: GoalClassification
+    ) {
+        val goal = GoalEntity(
+            id = 0, // El ID será asignado automáticamente en el repositorio
+            name = name,
+            description = description,
+            imageUri = imageUri,
+            classification = classification
+        )
+        GoalRepository.insertGoal(goal)
     }
 
-    fun listGoals(): List<GoalEntity> {
-        return repository.getGoals()
+    // Obtener todas las metas
+    fun getAllGoals(): List<GoalEntity> {
+        return GoalRepository.getGoals()
     }
 
-    fun editGoal(goal: GoalEntity) {
-        repository.updateGoal(goal)
+    // Obtener una meta por ID
+    fun getGoalById(id: Int): GoalEntity? {
+        return GoalRepository.getGoals().find { it.id == id }
     }
 
-    fun removeGoal(goalId: Int) {
-        repository.deleteGoal(goalId)
+    // Actualizar una meta
+    fun updateGoal(goal: GoalEntity) {
+        GoalRepository.updateGoal(goal)
+    }
+
+    // Eliminar una meta
+    fun deleteGoal(goal: GoalEntity) {
+        GoalRepository.deleteGoal(goal)
     }
 }

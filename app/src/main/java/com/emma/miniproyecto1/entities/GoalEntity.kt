@@ -6,14 +6,10 @@ enum class GoalClassification {
     LONG_TERM
 }
 
-
-
 data class GoalEntity(
-    val id: Int,                      // Unique identifier
-    var title: String,                // Title of the goal
-    var description: String,          // Description of the goal
-    var startDate: String,            // Start date
-    var endDate: String,              // Due date
-    var classification: GoalClassification,  // Classification
-    var imagePath: String?            // Local path of the motivational image (optional)
+    val id: String,
+    val name: String,
+    val description: String,
+    val imageUri: String, // Asegúrate de que no sea nullable
+    val classification: GoalClassification
 )
